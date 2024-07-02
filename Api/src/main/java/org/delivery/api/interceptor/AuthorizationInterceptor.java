@@ -41,7 +41,7 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
             return true;
         }
 
-        //ToDo header 검증 아 깃 겁나 어렵다
+        //ToDo header 검증 아 깃  조금 쉬워 졌다.
         var accessToken = request.getHeader("authorization-token");
         if(accessToken ==null){
             throw new ApiException(TokenErrorCode.AUTHORIZATION_TOKEN_NOT_FOUND);
